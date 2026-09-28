@@ -51,6 +51,7 @@ pip install -r requirements.txt
 python scripts/word_problems_onestep.py
 python scripts/word_problems.py
 python scripts/subtraction_3digit.py
+python scripts/multiplication_2digit.py
 python scripts/rounding.py
 python scripts/reading_comp.py
 python scripts/reading_comp_mc.py
@@ -157,6 +158,18 @@ Keep a story to two or three short sentences so it fits.
 | Answer key | `math/addition-subtraction/subtraction-3-digit-answer-key.pdf` |
 
 Each page is a 5 by 5 grid of vertical 3-digit problems. Problems that need regrouping are mixed with problems that do not. Both numbers are 3 digits, and the answer is never negative. Problems are numbered 1–25 on every page, and the pages are numbered, such as “Page 3 of 50.”
+
+### 2-digit multiplication
+
+`python scripts/multiplication_2digit.py` writes a 50-page packet and a compact answer key.
+
+| | |
+| --- | --- |
+| Script | `scripts/multiplication_2digit.py` |
+| Student packet | `math/multiplication/multiplication-2-digit.pdf` |
+| Answer key | `math/multiplication/multiplication-2-digit-answer-key.pdf` |
+
+Each page is a 5 by 5 grid of vertical 2-digit by 2-digit problems. Both factors are from 10 to 99. Problems are numbered 1–25 on every page, and the pages are numbered, such as “Page 3 of 50.”
 
 ### Rounding
 

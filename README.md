@@ -48,6 +48,7 @@ Needs Python 3. ReportLab is listed in `requirements.txt`.
 
 ```
 pip install -r requirements.txt
+python scripts/word_problems_2digit.py
 python scripts/word_problems_onestep.py
 python scripts/word_problems.py
 python scripts/subtraction_3digit.py
@@ -58,7 +59,52 @@ python scripts/reading_comp.py
 python scripts/reading_comp_mc.py
 ```
 
-### Single-step addition and subtraction
+### Single-step addition and subtraction (2-digit)
+
+| | |
+| --- | --- |
+| Script | `scripts/word_problems_2digit.py` |
+| Student packet | `math/word-problems/addition-subtraction-2-digit.pdf` |
+| Answer key | `math/word-problems/addition-subtraction-2-digit-answer-key.pdf` |
+
+The student packet is US Letter, 20 pages, 5 problems per page (100 problems). Addition and subtraction are mixed. Each story is one step only. Every number in the story, and the answer, is two digits (10–99).
+
+- Stories are Helvetica at 14 pt, with an answer line under each problem
+- Problems are numbered 1–100 and continue from page to page
+- Each student page has a name line, a date line, and a page number such as “Page 3 of 20”
+- The answer key is a separate PDF. Each line shows the problem number, the equation, and the final answer
+
+Problems live in `RAW_PROBLEMS` in the script. Each one is a one-step story:
+
+- `a` and `b` are whole numbers from 10 to 99. They are the only numbers in the story
+- `op` is `+` or `-`
+- The answer must also be from 10 to 99
+- `unit` is the word on the answer, such as `crayons`, so the key reads `84 crayons`
+- `template` is the story. Write `{a}` and `{b}` where the numbers go. Do not type the digits into the sentence
+
+```python
+{
+    "a": 48,
+    "op": "+",
+    "b": 36,
+    "unit": "crayons",
+    "template": (
+        "Maya has {a} crayons. She buys {b} more. How many crayons "
+        "does Maya have now?"
+    ),
+}
+```
+
+The script does the arithmetic. It stops without writing the PDFs if a problem breaks a rule:
+
+- The list is not exactly 100 problems
+- A number or the final answer is outside 10–99
+- The story text does not contain `a` and `b`
+- A story is too long to fit above its answer line
+
+Keep a story to two short sentences so it fits.
+
+### Single-step addition and subtraction (3-digit)
 
 | | |
 | --- | --- |
@@ -159,7 +205,6 @@ Keep a story to two or three short sentences so it fits.
 | Answer key | `math/addition-subtraction/subtraction-3-digit-answer-key.pdf` |
 
 Each page is a 5 by 5 grid of vertical 3-digit problems. Problems that need regrouping are mixed with problems that do not. Both numbers are 3 digits, and the answer is never negative. Problems are numbered 1–25 on every page, and the pages are numbered, such as “Page 3 of 50.”
-
 
 ### 2-digit addition and subtraction
 

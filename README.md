@@ -36,6 +36,14 @@ Passages with questions, organized by grade so the text and the questions match 
 | --- | --- |
 | `grade-1/` through `grade-5/` | Passages and questions written at that grade level |
 
+### Writing — `writing/`
+
+Story starters and other pages that ask the student to write.
+
+| Folder | What belongs here |
+| --- | --- |
+| `prompts/` | Story beginnings with lined space to continue the story |
+
 ## How we add a worksheet
 
 Drop the finished file in the folder that matches its skill. Name the file so the skill and level are obvious from the filename, for example `multiplication-facts-2s-level-1.pdf`.
@@ -57,6 +65,10 @@ python scripts/multiplication_2digit.py
 python scripts/rounding.py
 python scripts/reading_comp.py
 python scripts/reading_comp_mc.py
+python scripts/writing_prompts.py
+python scripts/writing_prompts.py fall
+python scripts/writing_prompts.py thanksgiving
+python scripts/writing_prompts.py winter
 ```
 
 ### Single-step addition and subtraction (2-digit)
@@ -303,3 +315,21 @@ Type size steps down by grade: 16 pt in grade 1, 15 pt in grade 2, 13 pt in grad
 The answer key lists the passage number, the title, each question, and the correct choice.
 
 Passages live in `scripts/passages_mc/`. Each one needs a title, the main character's name, the story, and three questions. A question stores the correct choice and three wrong choices. The script assigns the letters A through D so they stay spread out. It stops if a grade does not have 30 passages, if a story does not fill about half a page, or if a question does not fit in its box.
+
+### Seasonal story starters
+
+| | |
+| --- | --- |
+| Script | `scripts/writing_prompts.py` |
+| Fall packet | `writing/prompts/fall-story-starters.pdf` |
+| Thanksgiving packet | `writing/prompts/thanksgiving-story-starters.pdf` |
+| Winter packet | `writing/prompts/winter-story-starters.pdf` |
+| Images | `writing/prompts/images/` |
+
+Each student packet is US Letter, 5 pages. Each page is one story starter for that season.
+
+- The top has a title, a matching illustration, and a short story beginning
+- The rest of the page is blank writing lines for the student to continue the story
+- Each page has a name line, a date line, and a page number such as “Page 3 of 5”
+
+Prompts live in `PACKETS` in the script. Run with no arguments to rebuild every theme, or pass `fall`, `thanksgiving`, or `winter`. Each prompt needs a title, an image filename in `writing/prompts/images/`, and a starter paragraph.

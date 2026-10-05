@@ -43,6 +43,7 @@ Story starters and other pages that ask the student to write.
 | Folder | What belongs here |
 | --- | --- |
 | `prompts/` | Story beginnings with lined space to continue the story |
+| `descriptive-sentences/` | Sentences where the student adds adjectives to marked nouns |
 
 ## How we add a worksheet
 
@@ -69,6 +70,7 @@ python scripts/writing_prompts.py
 python scripts/writing_prompts.py fall
 python scripts/writing_prompts.py thanksgiving
 python scripts/writing_prompts.py winter
+python scripts/descriptive_sentences.py
 ```
 
 ### Single-step addition and subtraction (2-digit)
@@ -333,3 +335,21 @@ Each student packet is US Letter, 5 pages. Each page is one story starter for th
 - Each page has a name line, a date line, and a page number such as “Page 3 of 5”
 
 Prompts live in `PACKETS` in the script. Run with no arguments to rebuild every theme, or pass `fall`, `thanksgiving`, or `winter`. Each prompt needs a title, an image filename in `writing/prompts/images/`, and a starter paragraph.
+
+### Descriptive adjectives
+
+| | |
+| --- | --- |
+| Script | `scripts/descriptive_sentences.py` |
+| Student packet | `writing/descriptive-sentences/add-adjectives-fall-grade-2.pdf` |
+| Answer key | `writing/descriptive-sentences/add-adjectives-fall-grade-2-answer-key.pdf` |
+
+The student packet is US Letter, 10 pages, 5 sentences per page (50 sentences). Sentences are written for grade 2 and use a fall theme.
+
+- Directions are printed once at the top of each page
+- Each item shows a short fall sentence with nouns highlighted in yellow and underlined
+- The student adds a descriptive adjective before every highlighted noun and writes the new sentence on two lines below
+- Each page has a name line, a date line, a grade and theme label, and a page number such as “Page 3 of 10”
+- The answer key lists four suggested adjectives for each highlighted noun. Other fitting adjectives are also correct
+
+Items live in `RAW_ITEMS` in the script. Each one needs a braced template, such as `The {leaf} fell from the {tree}.`, and four suggestions per noun. The script stops if the list is not exactly 50 items, if suggestions do not match the nouns, or if a sentence wraps too far.

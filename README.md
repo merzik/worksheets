@@ -62,6 +62,7 @@ python scripts/word_problems_onestep.py
 python scripts/word_problems.py
 python scripts/subtraction_3digit.py
 python scripts/addition_subtraction_2digit.py
+python scripts/addition_subtraction_1digit.py
 python scripts/multiplication_2digit.py
 python scripts/rounding.py
 python scripts/reading_comp.py
@@ -231,6 +232,18 @@ Each page is a 5 by 5 grid of vertical 3-digit problems. Problems that need regr
 | Answer key | `math/addition-subtraction/addition-subtraction-2-digit-answer-key.pdf` |
 
 Each page is a 5 by 5 grid of vertical 2-digit problems. Addition and subtraction are mixed. Both numbers and the answer are from 10 to 99. Problems are numbered 1–25 on every page, and the pages are numbered, such as “Page 3 of 50.”
+
+### Single-digit addition and subtraction
+
+`python scripts/addition_subtraction_1digit.py` writes a 50-page packet and a compact answer key.
+
+| | |
+| --- | --- |
+| Script | `scripts/addition_subtraction_1digit.py` |
+| Student packet | `math/addition-subtraction/addition-subtraction-1-digit.pdf` |
+| Answer key | `math/addition-subtraction/addition-subtraction-1-digit-answer-key.pdf` |
+
+Each page has addition on the top half and subtraction on the bottom half. Each half is a 5 by 3 grid of vertical problems (15 addition, 15 subtraction). Both numbers are single digits (0–9). Addition answers may be one or two digits. Subtraction answers are never negative. Problems are numbered 1–30 on every page, and the pages are numbered, such as “Page 3 of 50.”
 
 ### 2-digit multiplication
 

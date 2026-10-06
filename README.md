@@ -64,6 +64,7 @@ python scripts/subtraction_3digit.py
 python scripts/addition_subtraction_2digit.py
 python scripts/addition_subtraction_1digit.py
 python scripts/multiplication_2digit.py
+python scripts/multiplication_2x1.py
 python scripts/rounding.py
 python scripts/reading_comp.py
 python scripts/reading_comp_mc.py
@@ -256,6 +257,18 @@ Each page has addition on the top half and subtraction on the bottom half. Each 
 | Answer key | `math/multiplication/multiplication-2-digit-answer-key.pdf` |
 
 Each page is a 5 by 5 grid of vertical 2-digit by 2-digit problems. Both factors are from 10 to 99. Problems are numbered 1–25 on every page, and the pages are numbered, such as “Page 3 of 50.”
+
+### 2-digit by 1-digit multiplication
+
+`python scripts/multiplication_2x1.py` writes a 50-page packet and a compact answer key.
+
+| | |
+| --- | --- |
+| Script | `scripts/multiplication_2x1.py` |
+| Student packet | `math/multiplication/multiplication-2x1.pdf` |
+| Answer key | `math/multiplication/multiplication-2x1-answer-key.pdf` |
+
+Each page is a 5 by 5 grid of vertical 2-digit by 1-digit problems. The first factor is from 10 to 99, and the second is from 1 to 9. Problems are numbered 1–25 on every page, and the pages are numbered, such as “Page 3 of 50.”
 
 ### Rounding
 

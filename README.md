@@ -23,7 +23,7 @@ Phonics and oral reading. These pages target how words are decoded and read, not
 
 | Folder | What belongs here |
 | --- | --- |
-| `short-vowels/` | CVC and other short-vowel patterns |
+| `short-vowels/` | CVC and other short-vowel patterns, including CCVC and CVCC blends |
 | `long-vowels/` | Silent-e and other long-vowel patterns |
 | `vowel-teams/` | Two-letter vowel spellings (ai, ea, oa, and so on) |
 | `fluency/` | Repeated reading, phrase practice, and rate-building pages |
@@ -73,6 +73,10 @@ python scripts/writing_prompts.py fall
 python scripts/writing_prompts.py thanksgiving
 python scripts/writing_prompts.py winter
 python scripts/descriptive_sentences.py
+python scripts/cvc_short_vowels.py
+python scripts/ccvc_cvcc.py
+python scripts/long_vowels.py
+python scripts/vowel_teams.py
 ```
 
 ### Single-step addition and subtraction (2-digit)
@@ -295,6 +299,59 @@ A number that ends in 5, or 50, rounds up.
 2. Replace `RAW_PROBLEMS` and the two output filenames. Put the PDFs in the folder for that skill. Name the student file so the skill and level are obvious, and add `-answer-key` to the teacher file.
 3. Keep this layout unless the skill needs a different one: letter size, 14 pt, name and date, numbered problems, numbered pages, an answer line, and a separate key.
 4. Run the new script.
+
+### CVC short vowels
+
+| | |
+| --- | --- |
+| Script | `scripts/cvc_short_vowels.py` |
+| Student packet | `reading/short-vowels/cvc-mixed.pdf` |
+| Answer key | `reading/short-vowels/cvc-mixed-answer-key.pdf` |
+
+`python scripts/cvc_short_vowels.py` writes a mixed short-vowel CVC packet: 30 worksheets, 2 pages each (60 student pages), plus a compact answer key.
+
+Each worksheet mixes short a, e, i, o, and u. Pictures are PNG clipart in `reading/short-vowels/images/` (one file per word, e.g. `cat.png`). Most icons are [Twemoji](https://github.com/twitter/twemoji) assets. Sections on each worksheet:
+
+- Spell the Word: 6 pictures (2×3) with three letter boxes under each
+- Unscramble: 8 pictures (2×4) with scrambled letters and a write-on line
+- Choose the Word: 5 minimal-pair sentences; circle the word that fits
+- Code Breakers: one symbol-to-letter key and 10 coded words in two columns, with letter boxes
+- Rhyme Match: 5 pairs in two shuffled columns; draw lines to match
+
+Page 1 holds Spell and Unscramble. Page 2 holds Choose the Word, Code Breakers, and Rhyme Match. Each page has a name line, a date line, and a page number such as “Page 3 of 60.”
+
+### CCVC and CVCC blends
+
+| | |
+| --- | --- |
+| Script | `scripts/ccvc_cvcc.py` |
+| Student packet | `reading/short-vowels/ccvc-cvcc-mixed.pdf` |
+| Answer key | `reading/short-vowels/ccvc-cvcc-mixed-answer-key.pdf` |
+| Images | `reading/short-vowels/images/` |
+
+`python scripts/ccvc_cvcc.py` writes 30 worksheets, 2 pages each (60 student pages), plus a compact answer key. Each worksheet mixes CCVC words (frog, stop) and CVCC words (milk, nest). The sections and page layout match the CVC packet, with four letter boxes.
+
+### Long vowels
+
+| | |
+| --- | --- |
+| Script | `scripts/long_vowels.py` |
+| Student packet | `reading/long-vowels/long-vowels-mixed.pdf` |
+| Answer key | `reading/long-vowels/long-vowels-mixed-answer-key.pdf` |
+| Images | `reading/long-vowels/images/` |
+
+`python scripts/long_vowels.py` writes 30 worksheets, 2 pages each (60 student pages), plus a compact answer key. Each worksheet mixes silent-e long a, i, o, and u (cake, bike, rose, flute). The sections and page layout match the CVC packet. Letter boxes match the word.
+
+### Vowel teams
+
+| | |
+| --- | --- |
+| Script | `scripts/vowel_teams.py` |
+| Student packet | `reading/vowel-teams/vowel-teams-mixed.pdf` |
+| Answer key | `reading/vowel-teams/vowel-teams-mixed-answer-key.pdf` |
+| Images | `reading/vowel-teams/images/` |
+
+`python scripts/vowel_teams.py` writes 30 worksheets, 2 pages each (60 student pages), plus a compact answer key. Each worksheet mixes vowel teams such as ai, ay, ea, ee, ie, oa, ow, oo, ue, and ui (rain, tree, boat, moon). The sections and page layout match the CVC packet. Letter boxes match the word.
 
 ### Reading comprehension
 

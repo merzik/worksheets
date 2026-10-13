@@ -58,6 +58,7 @@ Needs Python 3. ReportLab is listed in `requirements.txt`.
 ```
 pip install -r requirements.txt
 python scripts/word_problems_2digit.py
+python scripts/word_problems_2digit_multistep.py
 python scripts/word_problems_onestep.py
 python scripts/word_problems.py
 python scripts/subtraction_3digit.py
@@ -168,7 +169,54 @@ The script does the arithmetic. It stops without writing the PDFs if a problem b
 
 Keep a story to two short sentences so it fits.
 
-### Multi-step addition and subtraction
+### Multi-step addition and subtraction (2-digit)
+
+| | |
+| --- | --- |
+| Script | `scripts/word_problems_2digit_multistep.py` |
+| Student packet | `math/word-problems/addition-subtraction-2-digit-multistep.pdf` |
+| Answer key | `math/word-problems/addition-subtraction-2-digit-multistep-answer-key.pdf` |
+
+The student packet is US Letter, 10 pages, 5 problems per page (50 problems). Each story is two steps. Every number in the story, both middle steps, and the answer is two digits (10–99).
+
+- Stories are Helvetica at 14 pt, with an answer line under each problem
+- Problems are numbered 1–50 and continue from page to page
+- Each student page has a name line, a date line, and a page number such as “Page 3 of 10”
+- The answer key is a separate PDF. Each line shows the problem number, both steps, and the final answer
+
+Problems live in `RAW_PROBLEMS` in the script. Each one is a two-step story:
+
+- `a`, `b`, and `c` are whole numbers from 10 to 99. They are the only numbers in the story
+- `op1` and `op2` are `+` or `-`, in the order the story happens
+- The middle step and final answer must also be from 10 to 99
+- `unit` is the word on the answer, such as `crayons`, so the key reads `39 crayons`
+- `template` is the story. Write `{a}`, `{b}`, and `{c}` where the numbers go. Do not type the digits into the sentence
+
+```python
+{
+    "a": 48,
+    "op1": "+",
+    "b": 26,
+    "op2": "-",
+    "c": 35,
+    "unit": "crayons",
+    "template": (
+        "Maya has {a} crayons. She buys {b} more. Then she gives {c} "
+        "crayons to her class. How many crayons does Maya have left?"
+    ),
+}
+```
+
+The script does the arithmetic. It stops without writing the PDFs if a problem breaks a rule:
+
+- The list is not exactly 50 problems
+- A number, a middle step, or the final answer is outside 10–99
+- The story text does not contain `a`, `b`, and `c`
+- A story is too long to fit above its answer line
+
+Keep a story to two or three short sentences so it fits.
+
+### Multi-step addition and subtraction (3-digit)
 
 | | |
 | --- | --- |

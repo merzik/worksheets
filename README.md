@@ -71,6 +71,7 @@ python scripts/reading_comp.py
 python scripts/reading_comp_mc.py
 python scripts/writing_prompts.py
 python scripts/writing_prompts.py fall
+python scripts/writing_prompts.py halloween
 python scripts/writing_prompts.py thanksgiving
 python scripts/writing_prompts.py winter
 python scripts/descriptive_sentences.py
@@ -455,6 +456,7 @@ Passages live in `scripts/passages_mc/`. Each one needs a title, the main charac
 | --- | --- |
 | Script | `scripts/writing_prompts.py` |
 | Fall packet | `writing/prompts/fall-story-starters.pdf` |
+| Halloween packet | `writing/prompts/halloween-story-starters.pdf` |
 | Thanksgiving packet | `writing/prompts/thanksgiving-story-starters.pdf` |
 | Winter packet | `writing/prompts/winter-story-starters.pdf` |
 | Images | `writing/prompts/images/` |
@@ -465,7 +467,7 @@ Each student packet is US Letter, 5 pages. Each page is one story starter for th
 - The rest of the page is blank writing lines for the student to continue the story
 - Each page has a name line, a date line, and a page number such as “Page 3 of 5”
 
-Prompts live in `PACKETS` in the script. Run with no arguments to rebuild every theme, or pass `fall`, `thanksgiving`, or `winter`. Each prompt needs a title, an image filename in `writing/prompts/images/`, and a starter paragraph.
+Prompts live in `PACKETS` in the script. Run with no arguments to rebuild every theme, or pass `fall`, `halloween`, `thanksgiving`, or `winter`. Each prompt needs a title, an image filename in `writing/prompts/images/`, and a starter paragraph.
 
 ### Descriptive adjectives
 

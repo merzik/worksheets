@@ -230,6 +230,68 @@ PACKETS = {
             },
         ],
     },
+    "halloween": {
+        "pdf_name": "halloween-story-starters.pdf",
+        "pdf_title": "Halloween Story Starters",
+        "prompts": [
+            {
+                "title": "Trick-or-Treat Surprise",
+                "image": "halloween-trick-or-treat.jpg",
+                "starter": (
+                    "Quinn walked up the porch steps in a homemade costume, "
+                    "holding a pumpkin candy bucket. The porch light glowed "
+                    "warm and yellow. Before Quinn could knock, the door "
+                    "opened by itself, just a crack. A tiny paper bat swung "
+                    "from the knocker, and a soft voice from inside said, "
+                    "\"Come in. I have been waiting for you.\""
+                ),
+            },
+            {
+                "title": "The Friendly Ghost",
+                "image": "halloween-friendly-ghost.jpg",
+                "starter": (
+                    "A soft white shape drifted above the leaf-covered path. "
+                    "It was a ghost, but it did not look scary. It smiled "
+                    "and waved one floaty arm. \"Do not be afraid,\" it "
+                    "whispered. \"I lost something important on Halloween "
+                    "night, and I think you can help me find it.\""
+                ),
+            },
+            {
+                "title": "The Talking Pumpkin",
+                "image": "halloween-jackolantern.jpg",
+                "starter": (
+                    "The jack-o'-lantern on the porch glowed with a bright "
+                    "orange light. Its carved smile looked almost alive. "
+                    "As Reese walked past, the pumpkin's eyes blinked. "
+                    "\"Psst,\" it said in a warm, crackly voice. \"I have a "
+                    "message for you, but you have to listen closely.\""
+                ),
+            },
+            {
+                "title": "The Midnight Cat",
+                "image": "halloween-black-cat.jpg",
+                "starter": (
+                    "A black cat sat on the fence under the full moon. Its "
+                    "yellow eyes followed every step along the sidewalk. "
+                    "When it leaped down, it landed without a sound. Then "
+                    "it walked ahead a few paces, looked back, and meowed "
+                    "once, as if it wanted company on a secret errand."
+                ),
+            },
+            {
+                "title": "The Bubbling Cauldron",
+                "image": "halloween-cauldron.jpg",
+                "starter": (
+                    "In the classroom, a big black cauldron bubbled with "
+                    "green foam for the Halloween party. Avery gave it one "
+                    "careful stir with a long wooden spoon. Suddenly the "
+                    "bubbles rose higher, and a small glowing marble floated "
+                    "up from the middle. It hovered in the air, waiting."
+                ),
+            },
+        ],
+    },
 }
 
 
